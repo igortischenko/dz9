@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cloneObj(obj) {
+            const Obj = {};
+
+            for (let prop in obj) {
+                Obj[prop] = obj[prop];
+            }
+            return Obj;
+        }
+
+        function getValues(obj) {
+            let array = [];
+
+            for (key in obj) {
+                array.push(obj[key]);
+            }
+            return array;
+        }
+
+        function getKeys(obj) {
+            let array = [];
+
+            for (key in obj) {
+                array.push(key);
+            }
+            return array;
+        }
+
+        function getEntries(obj) {
+            let array = [];
+
+            for (key in obj) {
+                let Array = [];
+
+                for (let i = 0; i < 2; i++) {
+                    i == 0 ? Array[i] = key : Array[i] = obj[key];
+                }
+                array.push(Array);
+            }
+            return array;
+        }
+
+    </script>
+</body>
+</html>
